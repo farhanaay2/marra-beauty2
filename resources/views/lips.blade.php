@@ -2,28 +2,25 @@
 @section('title','Lips — Marra Beauty')
 
 @section('content')
-<div class="wrap" style="padding:40px 0">
+  <section class="section">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="eyebrow">Semi permanent makeup</span>
+        <h1 class="section__title">Lips treatment dengan hasil natural</h1>
+        <p class="section__subtitle">Teknik pewarnaan bibir yang lembut dan tahan lama, dirancang khusus untuk warna kulit Indonesia.</p>
+      </div>
 
-  <h2 class="title">Lips Treatment</h2>
-  <p class="subtitle">Warna bibir tahan lama dengan hasil natural</p>
+      <div class="tile-grid tile-grid--narrow">
+        <article class="tile" id="velvet">
+          <h3 class="tile__title">Velvet Lips</h3>
+          <p class="tile__desc">Memberikan efek beludru lembut dengan warna merata dan bibir terasa lembap.</p>
+        </article>
 
-  <div class="price-list">
-
-    {{-- Velvet Lips --}}
-    <div id="velvet" class="pl-group">
-      <div class="pl-title">Velvet Lips</div>
-      <div class="pl-line"></div>
-      <p class="note">Teknik pewarnaan bibir agar tampak fresh & merata dengan hasil beludru lembut.</p>
+        <article class="tile" id="retouch">
+          <h3 class="tile__title">Velvet Lips + Retouch</h3>
+          <p class="tile__desc">Termasuk sesi retouch untuk memastikan warna lebih tahan lama dan intens sesuai keinginan.</p>
+        </article>
+      </div>
     </div>
-
-    {{-- Velvet + Retouch --}}
-    <div id="retouch" class="pl-group">
-      <div class="pl-title">Velvet Lips + Retouch</div>
-      <div class="pl-line"></div>
-      <p class="note">Termasuk retouch agar warna lebih tahan lama & natural sesuai kulit bibir.</p>
-    </div>
-
-  </div>
-
-</div>
+  </section>
 @endsection
