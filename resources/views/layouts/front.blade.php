@@ -16,7 +16,7 @@
   <div class="site-nav__overlay" id="navOverlay" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="container header-bar">
+    <div class="container site-header__inner">
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
         <span class="sr-only">Buka navigasi</span>
         <span class="nav-toggle__line"></span>
@@ -26,10 +26,7 @@
 
       <a class="brand" href="{{ route('home') }}">marra</a>
 
-      <a class="header-cta" href="https://wa.me/6282261252011" target="_blank" rel="noopener">Reservasi</a>
-    </div>
-
-    <nav class="site-nav" id="primaryNav" aria-label="Navigasi utama">
+      <nav class="site-nav" id="primaryNav" aria-label="Navigasi utama">
       <div class="site-nav__head">
         <span>Jelajahi Marra</span>
         <button class="site-nav__close" id="navClose" type="button" aria-label="Tutup menu">×</button>
@@ -121,6 +118,9 @@
         </li>
       </ul>
     </nav>
+
+      <a class="header-cta" href="https://wa.me/6282261252011" target="_blank" rel="noopener">Reservasi</a>
+    </div>
   </header>
 
   <main class="site-main">
