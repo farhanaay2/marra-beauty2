@@ -171,6 +171,7 @@
       <a class="button button--primary" href="https://wa.me/6282261252011" target="_blank" rel="noopener">Buat janji sekarang</a>
     </div>
   </section>
+@endsection
 
 @push('scripts')
 <script>

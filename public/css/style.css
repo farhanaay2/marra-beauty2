@@ -983,8 +983,14 @@ body.nav-open {
 
 @media (min-width: 992px) {
   .site-header__inner {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
     gap: 2rem;
+  }
+
+  .site-header__inner .brand {
+    justify-self: flex-start;
   }
 
   .nav-toggle {
@@ -1005,7 +1011,9 @@ body.nav-open {
     background: transparent;
     box-shadow: none;
     overflow: visible;
-    margin-left: 2rem;
+    margin-left: 0;
+    flex: 1;
+    justify-content: center;
   }
 
   .header-cta {
@@ -1021,6 +1029,8 @@ body.nav-open {
     display: flex;
     gap: 1.6rem;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .site-nav__item {
