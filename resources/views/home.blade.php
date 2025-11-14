@@ -3,206 +3,189 @@
 @section('title','Marra Beauty')
 
 @section('content')
+  <section class="hero" id="beranda">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="eyebrow">Salon &amp; studio kecantikan Bandung</span>
+        <h1 class="hero__title">Glow up tanpa kompromi</h1>
+        <p class="hero__text">Nikmati layanan nails, lashes, dan perawatan wajah dengan standar higienis, teknisi tersertifikasi, serta pengalaman spa yang hangat dan personal.</p>
 
-  {{-- ========= HERO SLIDER ========= --}}
-  <section class="hero-slider" id="hero" aria-label="Highlight">
-    <div class="slides">
-      {{-- Slide 1 --}}
-      <div class="slide is-active">
-        <img src="{{ asset('hero1.jpg') }}" alt="Ruang layanan bersih dan higienis">
-        <div class="slide__overlay">
-          <div class="badge-round">STAY<br>SAFE &<br>HEALTHY</div>
-          <div class="pill">Pastikan Anda</div>
-          <div class="pill pill--dark">
-            <strong>MERASAKAN</strong>
-            <span>Layanan Terbaik Kami</span>
-          </div>
+        <div class="hero__actions">
+          <a class="button button--primary" href="{{ route('pricelist') }}">Lihat menu harga</a>
+          <a class="button button--ghost" href="https://wa.me/6282261252011" target="_blank" rel="noopener">Chat admin</a>
         </div>
+
+        <ul class="hero__stats" aria-label="Pencapaian Marra Beauty">
+          <li>
+            <span class="hero__stats-number">10+</span>
+            <span class="hero__stats-label">Teknisi ahli &amp; tersertifikasi</span>
+          </li>
+          <li>
+            <span class="hero__stats-number">4.9★</span>
+            <span class="hero__stats-label">Rating rata-rata dari pelanggan</span>
+          </li>
+          <li>
+            <span class="hero__stats-number">7 hari</span>
+            <span class="hero__stats-label">Garansi touch up setelah treatment</span>
+          </li>
+        </ul>
       </div>
 
-      {{-- Slide 2 --}}
-      <div class="slide">
-        <img src="{{ asset('hero2.jpg') }}" alt="Hasil natural rapi">
-        <div class="slide__overlay">
-          <div class="badge-round">NATURAL<br>LOOK</div>
-          <div class="pill">Hasil Rapi & Nyaman</div>
-          <div class="pill pill--dark">
-            <strong>TEKNISI</strong>
-            <span>Berpengalaman</span>
+      <div class="hero__media">
+        <div class="hero__card hero__card--main">
+          <img src="{{ asset('hero1.jpg') }}" alt="Ruang treatment bersih dan nyaman" />
+        </div>
+        <div class="hero__card hero__card--accent">
+          <img src="{{ asset('hero2.jpg') }}" alt="Teknisi lashes sedang bekerja" />
+          <div class="hero__card-note">
+            <strong>98%</strong>
+            <span>Klien merasakan peningkatan rasa percaya diri setelah kunjungan pertama.</span>
           </div>
         </div>
-      </div>
-
-      {{-- Slide 3 --}}
-      <div class="slide">
-        <img src="{{ asset('hero3.jpg') }}" alt="Harga bersahabat transparan">
-        <div class="slide__overlay">
-          <div class="badge-round">BEST<br>PRICE</div>
-          <div class="pill">Harga Bersahabat</div>
-          <div class="pill pill--dark">
-            <strong>TRANSPARAN</strong>
-            <span>Tanpa Taktik</span>
-          </div>
+        <div class="hero__floating" aria-hidden="true">
+          <span class="hero__floating-title">Higienis &amp; aman</span>
+          <p>Peralatan steril untuk setiap klien agar treatment selalu nyaman.</p>
         </div>
       </div>
     </div>
-
-    <button class="nav prev" id="prevSlide" aria-label="Slide sebelumnya">‹</button>
-    <button class="nav next" id="nextSlide" aria-label="Slide berikutnya">›</button>
   </section>
 
-  {{-- ========= TAGLINE ========= --}}
-  <section class="intro wrap">
-    <h2 class="title">Salon Wanita & Pria Terpopuler di Bandung</h2>
-    <p class="subtitle">Melayani sepenuh hati dengan teknisi profesional & fasilitas higienis.</p>
+  <section class="section highlight">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="eyebrow">Why people love Marra</span>
+        <h2 class="section__title">Pengalaman holistik untuk setiap kunjungan</h2>
+        <p class="section__subtitle">Kami memastikan setiap treatment berjalan personal, higienis, dan selaras dengan gaya hidup Anda.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🧼</div>
+          <h3 class="feature-card__title">Sterilisasi menyeluruh</h3>
+          <p>Kami menerapkan protokol higienis kelas salon premium untuk tiap sesi.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🎨</div>
+          <h3 class="feature-card__title">Tren terbaru</h3>
+          <p>Teknisi selalu update trend nails &amp; lashes sehingga gaya Anda tetap kekinian.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon" aria-hidden="true">🤝</div>
+          <h3 class="feature-card__title">Pendampingan personal</h3>
+          <p>Konsultasi santai sebelum treatment agar hasil sesuai keinginan.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  {{-- ========= KEUNGGULAN ========= --}}
-  <section class="benefits wrap" aria-label="Keunggulan">
-    <figure class="benefits__media">
-      <img src="{{ asset('benefit-left.jpg') }}" alt="Produk dan alat higienis">
-    </figure>
-
-    <ul class="benefits__list">
-      <li>
-        <div class="ic" aria-hidden="true">🧴</div>
-        <div>
-          <h4>Up To Date</h4>
-          <p>Selalu update trend & teknik terbaru.</p>
+  <section class="section signature">
+    <div class="container signature__inner">
+      <div class="signature__media">
+        <div class="signature__photo signature__photo--primary">
+          <img src="{{ asset('benefit-left.jpg') }}" alt="Produk treatment premium" />
         </div>
-      </li>
-      <li>
-        <div class="ic" aria-hidden="true">💰</div>
-        <div>
-          <h4>Best Price</h4>
-          <p>Harga terbaik & terjangkau untuk semua.</p>
+        <div class="signature__photo signature__photo--secondary">
+          <img src="{{ asset('benefit-right.jpg') }}" alt="Teknisi berpengalaman" />
+          <div class="signature__badge">Premium Room</div>
         </div>
-      </li>
-      <li>
-        <div class="ic" aria-hidden="true">🤝</div>
-        <div>
-          <h4>Service Excellent</h4>
-          <p>Ramah, cepat, dan memuaskan.</p>
-        </div>
-      </li>
-    </ul>
-
-    <figure class="benefits__media">
-      <img src="{{ asset('benefit-right.jpg') }}" alt="Teknisi berpengalaman">
-    </figure>
+      </div>
+      <div class="signature__content">
+        <span class="eyebrow">Signature experience</span>
+        <h2 class="section__title">Setiap detail kami kurasi dengan sepenuh hati</h2>
+        <p>Kami percaya kecantikan terbaik hadir dari pengalaman yang hangat. Mulai dari ambience studio, musik, hingga aroma, semua dirancang untuk membuat Anda merasa rileks sejak pertama melangkah.</p>
+        <ul class="checklist">
+          <li>Teknisi bersertifikat &amp; terlatih secara berkala</li>
+          <li>Produk orisinal yang lembut untuk kulit Indonesia</li>
+          <li>Ruang perawatan eksklusif dengan kursi super nyaman</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  {{-- ========= PRODUK / LAYANAN ========= --}}
-  <section class="products" aria-label="Produk dan Layanan">
-    <div class="wrap">
-      <h2 class="title">Produk Perawatan Marra</h2>
-      <p class="subtitle">Layanan Rambut, Wajah, & Tubuh</p>
+  <section class="section section--muted">
+    <div class="container">
+      <div class="section__header">
+        <span class="eyebrow">Pilihan favorit</span>
+        <h2 class="section__title">Layanan pilihan kami</h2>
+        <p class="section__subtitle">Pilih layanan yang paling cocok untuk kebutuhan Anda hari ini.</p>
+      </div>
 
-      <div class="scroller" id="prodScroll">
-        @foreach (['massage','haircare','steam','styling','color','treatment','spa'] as $p)
-          <a class="card" href="#" aria-label="Produk {{ ucfirst($p) }}">
-            <img src="{{ asset('prod-'.$p.'.jpg') }}" alt="Perawatan {{ ucfirst($p) }}">
-            <div class="card__caption">{{ ucfirst($p) }}</div>
-          </a>
+      <div class="carousel" id="serviceCarousel">
+        @foreach (['massage','haircare','steam','styling','color','treatment','spa'] as $service)
+          <article class="service-card">
+            <img src="{{ asset('prod-'.$service.'.jpg') }}" alt="Perawatan {{ ucfirst($service) }}" />
+            <div class="service-card__body">
+              <span class="service-card__tag">Layanan</span>
+              <h3 class="service-card__title">{{ ucfirst($service) }}</h3>
+              <p>Buat tampilan Anda semakin menawan dengan sesi {{ strtolower(str_replace('-', ' ', $service)) }} yang personal.</p>
+            </div>
+          </article>
         @endforeach
       </div>
 
-      <div class="scroller__nav">
-        <button class="scroll prev" data-target="prodScroll" aria-label="Geser kiri">‹</button>
-        <button class="scroll next" data-target="prodScroll" aria-label="Geser kanan">›</button>
+      <div class="carousel__controls">
+        <button class="carousel__button" data-direction="prev" data-target="serviceCarousel" aria-label="Geser layanan sebelumnya">‹</button>
+        <button class="carousel__button" data-direction="next" data-target="serviceCarousel" aria-label="Geser layanan berikutnya">›</button>
       </div>
     </div>
   </section>
 
-  {{-- ========= LOKASI ========= --}}
-  <section class="locations wrap" aria-label="Lokasi Cabang">
-    <h2 class="title">Cabang Marra</h2>
-    <p class="subtitle">2 Cabang — Disarankan <strong>Reservasi</strong> terlebih dahulu</p>
+  <section class="section locations">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="eyebrow">Two strategic studios</span>
+        <h2 class="section__title">Kunjungi cabang terdekat Anda</h2>
+        <p class="section__subtitle">Reservasi terlebih dahulu agar kami dapat menyiapkan pengalaman terbaik.</p>
+      </div>
 
-    <div class="locations__grid">
-      <figure class="loc__media">
-        <img src="{{ asset('loc-promo.jpg') }}" alt="Informasi jam buka">
-        <figcaption class="bubble">
-          <b>BUKA SETIAP HARI</b><br>
-          10.00 – 19.00 WIB
-        </figcaption>
-      </figure>
-
-      <ul class="loc__list">
-        <li>
-          <div class="loc-title">
-            <span class="loc-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#b56a7a">
-                <path d="M12 2a7 7 0 0 0-7 7c0 5.3 5.4 11.5 6.7 13a.6.6 0 0 0 .8 0C13.9 20.5 19 14.3 19 9a7 7 0 0 0-7-7Zm0 9.9A2.9 2.9 0 1 1 12 6a2.9 2.9 0 0 1 0 5.9Z"/>
-              </svg>
-            </span>
-            <b>Marra Beauty Studio — Bengawan</b>
-          </div>
-          <p>Jl. Bengawan No.45, Cihapit, Kec. Bandung Wetan,<br>
-             Kota Bandung, Jawa Barat 40114</p>
-          <p class="phone">Tlp. 0838–3835–2801</p>
-        </li>
-
-        <li>
-          <div class="loc-title">
-            <span class="loc-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#b56a7a">
-                <path d="M12 2a7 7 0 0 0-7 7c0 5.3 5.4 11.5 6.7 13a.6.6 0 0 0 .8 0C13.9 20.5 19 14.3 19 9a7 7 0 0 0-7-7Zm0 9.9A2.9 2.9 0 1 1 12 6a2.9 2.9 0 0 1 0 5.9Z"/>
-              </svg>
-            </span>
-            <b>Marra Beauty Studio — Dago</b>
-          </div>
-          <p>Jl. Ciungwanara No.10A, Lb. Siliwangi, Kec. Coblong,<br>
-             Kota Bandung, Jawa Barat 40135</p>
-          <p class="phone">Tlp. 0822–6125–2011</p>
-        </li>
-      </ul>
+      <div class="location-grid">
+        <figure class="location-hero">
+          <img src="{{ asset('loc-promo.jpg') }}" alt="Informasi jam operasional Marra Beauty" />
+          <figcaption class="location-hero__caption">
+            <span>BUKA SETIAP HARI</span>
+            <strong>10.00 – 19.00 WIB</strong>
+          </figcaption>
+        </figure>
+        <div class="location-list">
+          <article class="location-item">
+            <h3 class="location-item__title">Marra Beauty Studio — Bengawan</h3>
+            <p class="location-item__desc">Jl. Bengawan No.45, Cihapit, Kec. Bandung Wetan,<br>Kota Bandung, Jawa Barat 40114</p>
+            <a class="location-item__contact" href="tel:083838352801">0838-3835-2801</a>
+          </article>
+          <article class="location-item">
+            <h3 class="location-item__title">Marra Beauty Studio — Dago</h3>
+            <p class="location-item__desc">Jl. Ciungwanara No.10A, Lb. Siliwangi, Kec. Coblong,<br>Kota Bandung, Jawa Barat 40135</p>
+            <a class="location-item__contact" href="tel:082261252011">0822-6125-2011</a>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
 
+  <section class="section cta">
+    <div class="container cta__inner">
+      <div class="cta__copy">
+        <h2 class="section__title">Siap tampil percaya diri?</h2>
+        <p class="section__subtitle">Booking jadwal favorit Anda sebelum penuh dan rasakan sendiri pelayanan personal dari Marra Beauty.</p>
+      </div>
+      <a class="button button--primary" href="https://wa.me/6282261252011" target="_blank" rel="noopener">Buat janji sekarang</a>
+    </div>
+  </section>
 @endsection
-
 
 @push('scripts')
 <script>
-/* =========================
-   HERO SLIDER (autoplay + nav)
-   ========================= */
-(function(){
-  const slides = Array.from(document.querySelectorAll('.hero-slider .slide'));
-  if (!slides.length) return;
-  let i = slides.findIndex(s => s.classList.contains('is-active'));
-  if (i < 0) i = 0;
-
-  const show = idx => {
-    slides.forEach(s => s.classList.remove('is-active'));
-    slides[idx].classList.add('is-active');
-  };
-
-  document.getElementById('nextSlide')?.addEventListener('click', () => {
-    i = (i + 1) % slides.length; show(i);
-  });
-  document.getElementById('prevSlide')?.addEventListener('click', () => {
-    i = (i - 1 + slides.length) % slides.length; show(i);
-  });
-
-  // Autoplay (6 detik)
-  setInterval(() => { i = (i + 1) % slides.length; show(i); }, 6000);
-})();
-
-/* =========================
-   HORIZONTAL SCROLLER
-   ========================= */
-(function(){
-  document.querySelectorAll('.scroll').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const id = btn.getAttribute('data-target');
-      const el = document.getElementById(id);
-      if (!el) return;
-      const delta = Math.round(el.clientWidth * 0.85);
-      el.scrollBy({ left: btn.classList.contains('next') ? delta : -delta, behavior: 'smooth' });
+  (() => {
+    const buttons = document.querySelectorAll('.carousel__button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = document.getElementById(button.dataset.target || '');
+        if (!target) return;
+        const direction = button.dataset.direction === 'next' ? 1 : -1;
+        const distance = Math.round(target.clientWidth * 0.8);
+        target.scrollBy({ left: distance * direction, behavior: 'smooth' });
+      });
     });
-  });
-})();
+  })();
 </script>
-@endpush
+@endsection
