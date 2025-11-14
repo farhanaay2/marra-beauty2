@@ -194,12 +194,16 @@ body.nav-open {
   border-bottom: 1px solid rgba(214, 188, 196, 0.3);
 }
 
-.header-bar {
+.site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.75rem;
+  padding: 0.85rem 0;
+}
+
+.site-header__inner .brand {
+  flex: 1;
+  text-align: center;
 }
 
 .brand {
@@ -469,7 +473,7 @@ body.nav-open {
 .hero__card--accent {
   width: min(280px, 72vw);
   aspect-ratio: 3 / 4;
-  margin-top: -2rem;
+  margin-top: 1.2rem;
 }
 
 .hero__card-note {
@@ -491,17 +495,15 @@ body.nav-open {
 }
 
 .hero__floating {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(47, 29, 43, 0.86);
+  position: static;
+  background: rgba(47, 29, 43, 0.9);
   color: #fff;
   padding: 0.9rem 1.2rem;
   border-radius: var(--radius-md);
-  width: min(280px, 85vw);
+  width: 100%;
   text-align: left;
   box-shadow: var(--shadow-md);
+  margin-top: 1.2rem;
 }
 
 .hero__floating-title {
@@ -918,6 +920,15 @@ body.nav-open {
 }
 
 @media (min-width: 768px) {
+  .site-header__inner {
+    padding: 1rem 0;
+  }
+
+  .site-header__inner .brand {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+
   .header-cta {
     display: inline-flex;
   }
@@ -942,10 +953,13 @@ body.nav-open {
   }
 
   .hero__floating {
-    left: auto;
-    right: 0;
-    transform: none;
+    position: absolute;
     bottom: 8px;
+    right: 0;
+    left: auto;
+    transform: none;
+    width: min(280px, 85%);
+    margin-top: 0;
   }
 
   .signature__inner {
@@ -968,6 +982,11 @@ body.nav-open {
 }
 
 @media (min-width: 992px) {
+  .site-header__inner {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
   .nav-toggle {
     display: none;
   }
@@ -986,6 +1005,11 @@ body.nav-open {
     background: transparent;
     box-shadow: none;
     overflow: visible;
+    margin-left: 2rem;
+  }
+
+  .header-cta {
+    margin-left: auto;
   }
 
   .site-nav__head,
