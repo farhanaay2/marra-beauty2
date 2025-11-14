@@ -5,6 +5,8 @@ use App\Http\Controllers\PageController;
 
 Route::get('/',         [PageController::class, 'home'])->name('home');
 Route::get('/nails',    [PageController::class, 'nails'])->name('nails');
+
+
 Route::get('/lashes',   [PageController::class, 'lashes'])->name('lashes');
 Route::get('/waxing',   [PageController::class, 'waxing'])->name('waxing');
 Route::get('/brows',    [PageController::class, 'brows'])->name('brows');
